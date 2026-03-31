@@ -2,7 +2,7 @@ async function calculateIMC(event) {
   event.preventDefault();
 
   const peso = document.getElementById("peso").value;
-  const altura = document.getElementById("altura").value; // Pega o 1.80 direto
+  const altura = document.getElementById("altura").value;
   const resultDiv = document.getElementById("result");
 
   try {
@@ -11,7 +11,7 @@ async function calculateIMC(event) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         peso: parseFloat(peso),
-        altura: parseFloat(altura), // Envia 1.80 como sua Controller exige
+        altura: parseFloat(altura),
       }),
     });
 

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  color: #0e1726;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 110, 200, 0.08), transparent 24%),
+    radial-gradient(circle at 90% 10%, rgba(0, 51, 102, 0.05), transparent 20%),
+    linear-gradient(135deg, #f0f4f8, #e8f0f8 55%, #f5f9fc);
+  min-height: 100vh;
+}
+
+#app {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  gap: 0;
+}
+
+.shell-header {
+  background: linear-gradient(135deg, #003366 0%, #004080 100%);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15);
+}
+
+.shell-header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shell-header p {
+  margin: 0.6rem 0 0;
+  color: #d0e0f0;
+  font-size: 0.95rem;
+}
+
+.impacta-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+
+.shell-nav {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  padding: 1rem 2rem 0;
+  background: linear-gradient(to bottom, rgba(0, 51, 102, 0.02), transparent);
+}
+
+.shell-nav a {
+  text-decoration: none;
+  color: #003366;
+  border: 2px solid #006ec8;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+
+.shell-nav a:hover {
+  background: #f0f4f8;
+}
+
+.shell-nav a.active {
+  background: #006ec8;
+  color: #fff;
+  border-color: #006ec8;
+}
+
+.shell-main {
+  min-height: 420px;
+  margin: 1rem 2rem 2rem;
+  background: #fff;
+  border-radius: 0;
+}
+
+.shell-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f8fafc;
+  color: #5f6b7a;
+  font-size: 0.9rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+
+.shell-footer strong {
+  color: #003366;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.65rem 0;
+}
+
+.cart-table input {
+  width: 70px;
+}
+
+@media (max-width: 640px) {
+  #app {
+    width: 94vw;
+    margin-top: 0;
+  }
+
+  .shell-header {
+    padding: 1.5rem;
+  }
+
+  .shell-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .shell-nav {
+    padding: 0.8rem 1rem 0;
+  }
+
+  .shell-main {
+    min-height: 320px;
+    margin: 1rem 0 0;
+  }
+
+  .shell-footer {
+    padding: 1.5rem;
+  }
+}
